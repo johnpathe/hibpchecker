@@ -1,10 +1,14 @@
 # hibpchecker
 
-README.md
-
 This is a very basic python script to check email addresses on haveibeenpwned.com
-add a list of email addresses to a text file and run this script to find out which breaches the email appears in and when the breach occurred.
 
+Add a list of email addresses to a text file and run this script
+
+You'll find out which breaches the email appears in and when the breach occurred.
+
+
+
+USAGE:
 
 You must install this python library first for this to work:
 https://github.com/kernelmachine/haveibeenpwned
