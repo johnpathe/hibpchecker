@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # 
+# TODO LIST:
 #allow input from file at command line
 #incorporate other dump checkers sites - ghostproject.fr, OTHER?
 #incorporate cred stuffer program
@@ -7,25 +8,14 @@
 	#verify email addr supplied at command line is valid
 #allow user to supply a filename
 	#specify file format (one email addr per line)
-
 #make this work with just regular python requests instead of using this HIBP library imported below
-import json
+
+
 
 # MUST INSTALL THIS FIRST!!!
 #using this library https://github.com/kernelmachine/haveibeenpwned
 
 from hibp import HIBP
-
-
-'''
-hibp execute() returns a list. each item in list is each breach this account appears in
-'''
-
-'''
-Inside each list item is a dict() with the following keys:
-[u'PwnCount', u'Domain', u'IsSensitive', u'Name', u'Title', u'DataClasses', u'IsRetired', u'IsSpamList', u'BreachDate', u'IsFabricated', u'ModifiedDate', u'LogoPath', u'AddedDate', u'IsVerified', u'Description']
-
-'''
 
 def pwnedChecker(account):
 	req1 = HIBP.get_account_breaches(account)
